@@ -13,7 +13,7 @@
 				{{ product.title }}
 			</div>
 			<div class="flex gap-3 items-center absolute bottom-5">
-				<span class="font-bold"> Pris: {{ product.price }} </span>
+				<span class="font-bold"> Pris: ${{ product.price }} </span>
 				<button class="text-white bg-gray-500 py-2 px-4 hover:bg-gray-400" @click="addToCart(product)">Lägg till i varukorgen</button>
 			</div>
 		</div>

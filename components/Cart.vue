@@ -17,7 +17,7 @@
 				</div>
 				<div>Antal: {{product.quantity}}</div>
 				<div class="font-bold">
-					Totalt pris: {{ product.price * product.quantity }}
+					Totalt pris: ${{ product.price * product.quantity }}
 				</div>
 			</div>
 		</div>
@@ -29,12 +29,12 @@
 
 	<div class="bg-gray-100 w-full py-6 mt-16 md:flex md:justify-between md:place-items-center" v-if="products">
 		<div class="md:flex md:flex-col md:justify-center">
-			<div class="mx-6">
+			<div class="mx-6 mb-3">
 				<span class="font-bold">Antal produkter: {{ totalQuantity }}</span>
 			</div>
 
 			<div class="mx-6">
-				<span class="font-bold">Totalt pris: {{ totalSum }}</span>
+				<span class="font-bold">Totalt pris: ${{ totalSum }}</span>
 			</div>
 		</div>
 
@@ -43,7 +43,7 @@
 		</div>
 	</div>
 
-	<div v-else class="mx-6 flex flex-col md:flex md:justify-start">
+	<div v-if="!products" class="mx-6 flex flex-col">
 		<span>Din varukorg är tom för tillfället!</span>
 		<a href="/">
 			<button class="bg-gray-500 text-white px-4 py-1 mt-8">Tillbaka till vårt sortiment</button>
